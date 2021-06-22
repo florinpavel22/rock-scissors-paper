@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1a1a1a;
+  --main-background: #f0f0f0;
+  --h1-background: #f3f3f3;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--main-background);
+}
+
+.container {
+  max-width: 130rem;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 765px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* -------- Feedback classes -------- */
+.tied {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.won {
+  color: #51bb51;
+  font-weight: 600;
+}
+
+.lost {
+  color: crimson;
+  font-weight: 600;
+}
+
+/* -------- The header -------- */
+h1 {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: var(--h1-background);
+  font-size: 5.1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 725px) {
+  h1 {
+    font-size: 4.2rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* -------- The scores section -------- */
+.scores {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 47rem;
+  margin: 0 auto;
+  padding: 1.5rem 3rem;
+  border: 0.4rem solid var(--main-color);
+  border-radius: 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.scores h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+}
+
+.scores p {
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+
+@media screen and (max-width: 475px) {
+  .scores {
+    text-align: start;
+  }
+
+  .scores h2 {
+    font-size: 2.2rem;
+  }
+
+  .scores p {
+    font-size: 2.5rem;
+  }
+
+  .player-area {
+    margin-right: 3rem;
+  }
+}
+
+/* -------- The choices section -------- */
+.choices {
+  max-width: 90rem;
+  margin: 7rem auto 4rem auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.choices > * {
+  cursor: pointer;
+}
+
+.choices div:not(:last-child) {
+  margin: 0 3rem 3rem 0;
+}
+
+.choices img {
+  margin-bottom: 1rem;
+  height: 16rem;
+  width: 16rem;
+  border: 0.4rem solid #000;
+  padding: 2.5rem;
+  border-radius: 50%;
+  transition: transform 400ms ease;
+}
+
+@media screen and (max-width: 725px) {
+  .choices img {
+    height: 13rem;
+    width: 13rem;
+    padding: 2rem;
+  }
+}
+
+.choices > *:hover img {
+  transform: scale(1.05);
+}
+
+.rock img {
+  background-color: rgba(228, 140, 156, 0.7);
+}
+
+.paper img {
+  background-color: rgba(187, 206, 110, 0.36);
+}
+
+.scissors img {
+  background-color: rgba(100, 149, 237, 0.5);
+}
+
+.choices p {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 725px) {
+  .choices p {
+    font-size: 2.5rem;
+  }
+}
+
+/* -------- The bottom paragraph -------- */
+.result__description {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.result__description p {
+  font-size: 3.4rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 725px) {
+  .result__description p {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .result__description p {
+    font-size: 2.2rem;
+  }
+}
