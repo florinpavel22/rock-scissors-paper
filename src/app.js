@@ -1,3 +1,5 @@
+import './style.css';
+
 // DOM QUERIES
 const playerScorePara = document.querySelector(".player-area p");
 const cpuScorePara = document.querySelector(".cpu-area p");
